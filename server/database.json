@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@doe.com",
+            "password": "password"
+        }
+    ],
+    "posts": [
+        {
+            "id": 0,
+            "title": "Sample",
+            "body": "body",
+            "userId": 0
+        },
+        {
+            "title": "Awesome",
+            "author": "thomas",
+            "id": 1,
+            "userId": 0
+        }
+    ]
+}
