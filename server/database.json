@@ -1,25 +1,46 @@
 {
-    "users": [
-        {
-            "id": 0,
-            "firstName": "John",
-            "lastName": "Doe",
-            "email": "john@doe.com",
-            "password": "password"
-        }
-    ],
-    "posts": [
-        {
-            "id": 0,
-            "title": "Sample",
-            "body": "body",
-            "userId": 0
-        },
-        {
-            "title": "Awesome",
-            "author": "thomas",
-            "id": 1,
-            "userId": 0
-        }
-    ]
+  "users": [
+    {
+      "id": 0,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@doe.com",
+      "password": "password"
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Nyambati",
+      "email": "thomasnyambati@gmail.com",
+      "password": "king",
+      "id": 1
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Nyambati",
+      "email": "thomasnyambati@andela.com",
+      "password": "kin",
+      "id": 2
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Nyambati",
+      "email": "thomasnyambati@gmail.com",
+      "password": "password",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "title": "Sample",
+      "body": "body",
+      "userId": 0
+    },
+    {
+      "title": "Awesome",
+      "author": "thomas",
+      "id": 1,
+      "userId": 0
+    }
+  ]
 }
