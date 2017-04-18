@@ -5,7 +5,7 @@ export const NgModule = (config) => {
     mapComponentsToModule(app, config.components);
     mapDirectivesToModule(app, config.directives);
     mapPipesToModule(app, config.pipes);
-    mapServicesToModule(app, config.services);
+    mapServicesToModule(app, config.providers);
     return target => app;
 };
 
@@ -22,5 +22,10 @@ export const bootstrap = name => angular
 export const Pipe = config => Target => Object
     .assign({}, config, { transform: new Target().transform });
 
-export const Service = config => target => Object
-    .assign({}, config, { classFn: target });
+export const Injectable = name => classFn => Object
+    .assign({}, { name: name ? name : classFn.name, classFn })
+
+export const Inject = (...injectables) => (target) => {
+    target.$inject = injectables;
+    return target;
+}

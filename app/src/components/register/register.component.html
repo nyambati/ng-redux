@@ -1,0 +1,9 @@
+<div class="register-form">
+    <div class="alert alert-success" role="alert" ng-show="$ctrl.session.message">
+        {{$ctrl.session.message}}
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="$ctrl.session.error">
+        {{$ctrl.session.error.message}}
+    </div>
+    <user-form button="Signup" on-submit="$ctrl.register($event)"></user-form>
+</div>

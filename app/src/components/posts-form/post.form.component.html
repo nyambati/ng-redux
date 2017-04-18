@@ -1,0 +1,20 @@
+<div class="post-form">
+    {{$ctrl.data}}
+    <div>
+        <h3>{{$ctrl.header}}</h3>
+    </div>
+    <hr>
+    <form ng-submit="$ctrl.submitForm($ctrl.data)">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="$ctrl.data.title" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <textarea name="postBody" class="form-control body" ng-model="$ctrl.data.body"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-sm btn-primary pull-right">{{$ctrl.button}}</button>
+    </form>
+</div>

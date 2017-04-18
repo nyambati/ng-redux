@@ -1,0 +1,28 @@
+<div class="login-form">
+    <alert error="$ctrl.errors.session.message" success="$ctrl.session.message" ng-show="$ctrl.session.message || $ctrl.errors.session.message"></alert>
+    <form ng-submit="$ctrl.login($ctrl.user) ">
+        <div class="form-group has-feedback ">
+            <label class="control-label " for="userEmail ">Email</label>
+            <div class="input-group ">
+                <span class="input-group-addon ">
+                <i class="glyphicon glyphicon-envelope "></i>
+            </span>
+                <input type="email" class="form-control" ng-model="$ctrl.user.email" required>
+            </div>
+            <span class="glyphicon form-control-feedback " aria-hidden="true "></span>
+            <span class="sr-only ">(error)</span>
+        </div>
+        <div class="form-group has-feedback ">
+            <label class="control-label " for="userPassword ">Password</label>
+            <div class="input-group ">
+                <span class="input-group-addon ">
+                <i class="glyphicon glyphicon-lock "></i>
+                </span>
+                <input type="password " class="form-control " ng-model="$ctrl.user.password " required>
+            </div>
+            <span class="glyphicon form-control-feedback " aria-hidden="true "></span>
+            <span class="sr-only ">(success)</span>
+        </div>
+        <button class="btn btn-sm btn-primary pull-right ">signin</button>
+    </form>
+</div>

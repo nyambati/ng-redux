@@ -1,0 +1,7 @@
+<div class="user-info">
+    <user-details data="$ctrl.users" on-update="$ctrl.showUpdateForm($event)" on-delete="$ctrl.removeUser($event)"></user-details>
+</div>
+<hr>
+<div class="register-form" ng-show="$ctrl.user">
+    <user-form on-submit="$ctrl.updateUserDetails($event)" button="Update" data="$ctrl.user" reset="$ctrl.discardChanges()"></user-form>
+</div>

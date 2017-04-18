@@ -1,0 +1,27 @@
+<div>
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <td>ID</td>
+            <td>FIRST NAME</td>
+            <td>LAST NAME</td>
+            <td>EMAIL</td>
+            <td>ACTIONS</td>
+        </tr>
+        <tr ng-repeat="user in $ctrl.data">
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <button class="btn btn-sm btn-danger" ng-click="$ctrl.deleteUser(user.id)">
+                    <i class="fa fa-remove"></i>
+                    Delete
+                </button>
+                <button class="btn btn-sm btn-default" ng-click="$ctrl.updateUser(user)">
+                    <i class="fa fa-edit"></i>
+                    Edit
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

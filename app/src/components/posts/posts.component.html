@@ -1,0 +1,10 @@
+<div class="posts">
+    <div class="post-list">
+        <pre>
+            {{$ctrl.posts}}
+        </pre>
+    </div>
+    <div class="post-form">
+        <post-form on-submit="$ctrl.addPost($event)" button="create" header="$ctrl.header"></post-form>
+    </div>
+</div>

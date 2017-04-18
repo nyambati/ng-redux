@@ -1,31 +1,26 @@
 import { NgModule, bootstrap } from './angular/core';
 import uiRouter from 'angular-ui-router';
 import ngRedux from 'ng-redux';
-import store from './store';
+import { store } from './store';
+import { initialState } from './store'
 
-// import router
-import Router from './router';
-
-// import services
-import SessionActions from './actions/session';
-// import components
+import AuthModule from './modules/auth.module';
+import UsersModule from './modules/users.module';
+import PostsModule from './modules/posts.module';
 import NavBarComponent from './components/navbar/navbar.component';
-import LoginComponent from './components/login/login.component';
-import RegisterComponent from './components//register/register.component';
-import AlertComponent from './components/alert/alert.component';
+import UserFormComponent from './components/user-form/user.component';
+import UserDetailsComponent from './components/user-details/user.details.component';
 
-let appConfig = {
+@NgModule({
     name: 'ng-redux',
-    modules: [uiRouter, ngRedux],
-    components: [NavBarComponent, LoginComponent, RegisterComponent, AlertComponent]
-}
+    modules: [uiRouter, ngRedux, AuthModule, UsersModule, PostsModule],
+    components: [NavBarComponent, UserFormComponent, UserDetailsComponent]
+})
 
-@NgModule(appConfig)
+export default class App { }
 
-export class App { }
-
-App.service('SessionActions', SessionActions)
-App.config(Router);
 App.config(store);
+App.config($locationProvider => $locationProvider.html5Mode(true));
+App.run(initialState)
 
 bootstrap(App.name)
